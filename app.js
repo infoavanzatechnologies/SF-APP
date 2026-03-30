@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // Create Express application
 const app = express();
-const port = 80;
+const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static('public'));
 // Define route to fetch data from static JSON file
